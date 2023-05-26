@@ -39,3 +39,27 @@ print(a.lower())
 input_str = "Hello Python Program"
 new_str = input_str.replace("Python", "React")
 print(input_str)
+
+#갯수세기: count
+
+# 문자열 찾기 : find(), rfind(), index()
+# find(): 찾은 문자열의 첫번째 인덱스 반환, 문자열을 차지 못하면 -1 반환
+# index() : 찾은 문자열의 첫 번째 인덱스 반환, 문자열을 차지 못하면, valueError 예외 발생
+
+phrase = "가장 큰 실수는 포기, 가장 어리석은 일은 남의 결점 찾기, 가장 좋은 선물은 용서"
+print(phrase.find("가장"))
+print(phrase.rfind("가장")) # 뒤에서 부터 찾지만 인덱스는 앞에서 부터
+
+print(phrase.index("포기")) 
+
+print(phrase.find("나에게"))  # 찾는 결과 없으면 -1
+# print(input_b.index("나에게")) # 해당 단어가 없으므로 에러가 발생 합니다
+
+new_phrase = phrase.replace("가장", "나에게")
+print(new_phrase)
+
+# 문자열 연산자
+# "문자열" + "문자열"
+# "문자열" *3 : 뒤에 오는 숫자만큼 문자열을 반복
+print("태양고" *2)
+print("안녕하세요", "!"*5, "\n", "\t", "=" *3, "\nggg"*3, "입니다.")
