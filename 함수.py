@@ -51,7 +51,27 @@ knife = 10 # 칼을 10자루 준비
 def game(player) :
     global knife
     knife -= player # 게임에서 참가한 선수가 사용한 개수만큼 차감
+    
+def game2(player, knife) :
+    knife -= player
     print(f"남아 있는 칼은 {knife}자루 입니다.")
 
 player = int(input("경기에 참여하는 선수가 몇 명 입니까?"))
-game(player)
+game2(player, knife)
+
+# 람다와 함수
+# 람다란? 간단한 함수의 선언과 호출을 하나의 식으로 간략히 표현, 이름 없는 함수를 의미
+def add(a, b) :
+    return a + b
+
+# print(add(10, 20))
+# print((lambda a, b : a+b)(10, 20))
+
+def power(n) :
+    return n*n
+
+square = lambda x:x*x # 람다식으로 익명의 함수 만들기
+input = [1,2,3,4,5,6,7,8,9,10]
+
+output = list(map(lambda x:x*x, input))
+print(output)
